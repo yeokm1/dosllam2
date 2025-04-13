@@ -18,6 +18,8 @@
 
 #include <unistd.h>
 
+#define VERSION "0.1"
+
 // YKM: OpenWatcom math.h does not have the float functions so we implement them as macros
 #define sqrtf(x) ((float)sqrt((double)(x)))
 #define powf(x, y) ((float)pow((double)(x), (double)(y)))
@@ -975,6 +977,8 @@ int main(int argc, char *argv[]) {
     unsigned long long rng_seed = 0; // seed rng with time by default
     char *mode = "generate";    // generate|chat
     char *system_prompt = NULL; // the (optional) system prompt to use in chat mode
+
+    printf("DOS Llama 2 chat client ver %s compiled on %s %s\n", VERSION, __DATE__, __TIME__);
 
     // poor man's C argparse so we can override the defaults above from the command line
     if (argc >= 2) { checkpoint_path = argv[1]; } else { error_usage(); }

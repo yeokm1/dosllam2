@@ -1,12 +1,12 @@
-TARGET = dosllm2
-OBJS = dosllm2.obj
+TARGET = dosllam2
+OBJS = dosllam2.obj
 CFLAGS = -zdp -za99
 LDFLAGS = SYSTEM dos4g NAME $(TARGET)
 
 all: $(TARGET).exe
 
-$(TARGET).obj: dosllm2.c
-	wcc386 $(CFLAGS) dosllm2.c
+$(TARGET).obj: dosllam2.c
+	wcc386 $(CFLAGS) dosllam2.c
 
 $(TARGET).exe: $(OBJS)
 	wlink $(LDFLAGS) FILE $(OBJS)
