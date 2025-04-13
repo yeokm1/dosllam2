@@ -978,7 +978,7 @@ int main(int argc, char *argv[]) {
     char *mode = "generate";    // generate|chat
     char *system_prompt = NULL; // the (optional) system prompt to use in chat mode
 
-    printf("DOS Llama 2 chat client ver %s compiled on %s %s\n", VERSION, __DATE__, __TIME__);
+    printf("DOS Llama 2 LLM client ver %s compiled on %s %s\n", VERSION, __DATE__, __TIME__);
 
     // poor man's C argparse so we can override the defaults above from the command line
     if (argc >= 2) { checkpoint_path = argv[1]; } else { error_usage(); }

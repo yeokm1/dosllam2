@@ -3,7 +3,7 @@ OBJS = dosllam2.obj
 CFLAGS = -zdp -za99
 LDFLAGS = SYSTEM dos32a NAME $(TARGET)
 
-all: $(TARGET).exe
+all: clean $(TARGET).exe
 
 $(TARGET).obj: dosllam2.c
 	wcc386 $(CFLAGS) dosllam2.c
@@ -11,6 +11,6 @@ $(TARGET).obj: dosllam2.c
 $(TARGET).exe: $(OBJS)
 	wlink $(LDFLAGS) FILE $(OBJS)
 
-clean:
+clean: .symbolic
 	@del *.obj
 	@del $(TARGET).exe
