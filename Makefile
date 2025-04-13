@@ -1,7 +1,7 @@
 TARGET = dosllam2
 OBJS = dosllam2.obj
 CFLAGS = -zdp -za99
-LDFLAGS = SYSTEM dos4g NAME $(TARGET)
+LDFLAGS = SYSTEM dos32a NAME $(TARGET)
 
 all: $(TARGET).exe
 
@@ -13,4 +13,4 @@ $(TARGET).exe: $(OBJS)
 
 clean:
 	@del *.obj
-	@del *.exe
+	@del $(TARGET).exe
