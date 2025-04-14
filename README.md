@@ -1,6 +1,6 @@
 ## dosllam2
 
-This is the modified version [llama2.c](https://github.com/karpathy/llama2.c) ported to run on 32-bit capable DOS machines.
+This is the modified version of [llama2.c](https://github.com/karpathy/llama2.c) ported to run on 32-bit capable DOS machines.
 
 <img src="images\dosllam2-usage.jpg" width="500">
 
