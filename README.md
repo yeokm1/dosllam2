@@ -4,7 +4,7 @@ This is the modified version of [llama2.c](https://github.com/karpathy/llama2.c)
 
 <img src="images\dosllam2-usage.jpg" width="500">
 
-Running on Thinkpad T42 and Toshiba Satellite 315CDT.
+Running on Thinkpad T42 (2004) and Toshiba Satellite 315CDT (1996).
 
 [![](http://img.youtube.com/vi/4241obgG_QI/0.jpg)](https://www.youtube.com/watch?v=4241obgG_QI)
 
@@ -12,9 +12,9 @@ Video of the program in action.
 
 ### Usage
 
-Download the program from the `releases` folder.
+Download the program from the `releases` folder. Put `tokenize.bin` in the same directory as the binary.
 
-Go to the `models` section below to download the appropriate Llama 2 stories model that is suitable for your system. 
+Go to the `models` section below to download the appropriate Llama 2 stories model that is suitable for your system depending on how much RAM you have.
 
 ```bash
 # Rename the models so they fit into 8.3 DOS filename length limit
