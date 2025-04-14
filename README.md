@@ -12,6 +12,8 @@ Video of the program in action.
 
 ### Usage
 
+Download the program from the `releases` folder.
+
 Go to the `models` section below to download the appropriate Llama 2 stories model that is suitable for your system. 
 
 ```bash
