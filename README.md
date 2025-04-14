@@ -1,3 +1,75 @@
+## dosllam2
+
+This is the modified version [llama2.c](https://github.com/karpathy/llama2.c) ported to run on 32-bit capable DOS machines.
+
+<img src="images\dosllam2-usage.jpg" width="500">
+
+Running on Thinkpad T42 and Toshiba Satellite 315CDT.
+
+[![](http://img.youtube.com/vi/4241obgG_QI/0.jpg)](https://www.youtube.com/watch?v=4241obgG_QI)
+
+Video of the program in action.
+
+### Usage
+
+Go to the `models` section below to download the appropriate Llama 2 stories model that is suitable for your system. 
+
+```bash
+# Rename the models so they fit into 8.3 DOS filename length limit
+# Load the models with no starting sentences
+dosllama2 st-260K.bin
+dosllama2 st-15M.bin
+dosllama2 st-42M.bin
+dosllama2 st-110.bin
+
+# With initial starting sentence
+dosllama2 st-15M.bin -i "Lisa heard"
+```
+
+If you have enough system RAM but face malloc problems, you may want to disable memory managers.
+
+### Compilation
+
+To compile this application, you have to use Open Watcom 2.0 beta which you can download from [here](https://github.com/open-watcom/open-watcom-v2/releases). The version used is [2025-04-01-Build)](https://github.com/open-watcom/open-watcom-v2/releases/tag/2025-04-01-Build).
+
+During installation, Open Watcom may prompt to install the environment variables. I chose to not do that to avoid having those variables being permanent. Instead I use a batch file to set the variables whenever I need to compile.
+
+The program is compiled via a Makefile.
+
+
+```bash
+# Optional batch file to set up Open Watcom dev environment to point to C:\WATCOM2
+20setenv.bat
+
+wmake
+```
+
+### Benchmarks
+
+Data is in tokens per second. All the operating systems are in MS-DOS 6.22 with no memory manager loaded.
+
+| System                          | CPU                       | RAM         | stories260K | stories15M | stories42M | stories110M |
+|---------------------------------|---------------------------|-------------|-------------|------------|------------|-------------|
+| Generic 486 system (1990s)      | 486 DX-2 66Mhz            | 32MB EDO    | 2.08        | -          | -          | -           |
+| Toshiba Satellite 315CDT (1996) | Pentium MMX 200Mhz        | 96MB EDO    | 15.32       | 0.43       | -          | -           |
+| Tweener PC (2001)               | Pentium III 667Mhz        | 512MB SDRAM | 80.04       | 2.35       | 0.89       | -           |
+| ThinkPad T42 (2004)             | Pentium M 735 1.7 Ghz     | 2GB DDR     | 331.6       | 11.55      | 4.42       | 1.71        |
+| ThinkPad X61 (2007)             | Core 2 Duo T7300 2.00Ghz  | 4GB DDR2    | 171.89      | 5.26       | 2.00       | 1.00        |
+| ThinkPad X301 (2008)            | Core 2 Duo SU9400 1.4 GHz | 8GB DDR3    | 171.95      | 5.30       | 1.98       | 0.77        |
+| ThinkPad X13 Gen 1 (2020)       | Core i5-10310U 1.7Ghz     | 16GB DDR4   | 386.36      | 10.51      | 3.89       | 1.53        |
+| Modern Desktop (2024)           | AMD Ryzen 5 7600 3.8 Ghz  | 128GB DDR5  | 927.27      | 15.95      | -          | -           |
+
+\- Cannot load due to memory allocation issue for the system
+
+stories260K sometimes have crashes for unknown reasons.
+
+Details of my vintage PCs used in this test: https://github.com/yeokm1/retro-configs
+
+### References/Sources
+
+1. llama98.c: https://github.com/exo-explore/llama98.c
+2. DOS/32 Advanced: https://archive.org/details/dos32a-912-bin
+
 ## llama2.c
 
 <p align="center">
