@@ -10,6 +10,8 @@ Running on Thinkpad T42 (2004) and Toshiba Satellite 315CDT (1996).
 
 Video of the program in action.
 
+Blog post of this project: https://yeokhengmeng.com/2025/04/llama2-llm-on-dos/
+
 ### Usage
 
 Download the program from the `releases` folder. Put `tokenize.bin` in the same directory as the binary.
