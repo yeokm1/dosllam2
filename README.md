@@ -69,6 +69,12 @@ stories260K sometimes have crashes for unknown reasons.
 
 Details of my vintage PCs used in this test: https://github.com/yeokm1/retro-configs
 
+
+### Releases:
+
+* v0.1 (15 Apr 2025): First release
+* v0.2 (18 Apr 2025): Compiled without unnecessary -zdp flag
+
 ### References/Sources
 
 1. llama98.c: https://github.com/exo-explore/llama98.c

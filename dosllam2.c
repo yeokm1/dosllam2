@@ -18,7 +18,7 @@
 
 #include <unistd.h>
 
-#define VERSION "0.1"
+#define VERSION "0.2"
 
 // YKM: OpenWatcom math.h does not have the float functions so we implement them as macros
 #define sqrtf(x) ((float)sqrt((double)(x)))

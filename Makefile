@@ -1,6 +1,6 @@
 TARGET = dosllam2
 OBJS = dosllam2.obj
-CFLAGS = -zdp -za99
+CFLAGS = -za99
 LDFLAGS = SYSTEM dos32a NAME $(TARGET)
 
 all: clean $(TARGET).exe
