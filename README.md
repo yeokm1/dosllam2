@@ -14,7 +14,7 @@ Blog post of this project: https://yeokhengmeng.com/2025/04/llama2-llm-on-dos/
 
 ### Usage
 
-Download the program from the `releases` folder. Put `tokenize.bin` in the same directory as the binary.
+Download the program from the `releases` folder. Put `tokenize.bin` in the same directory as the binary. If you see gibberish when using the st-260k.bin, take the `tok512.bin` and rename it to `tokenize.bin`.
 
 Go to the `models` section below to download the appropriate Llama 2 stories model that is suitable for your system depending on how much RAM you have.
 
@@ -79,6 +79,7 @@ Details of my vintage PCs used in this test: https://github.com/yeokm1/retro-con
 
 1. llama98.c: https://github.com/exo-explore/llama98.c
 2. DOS/32 Advanced: https://archive.org/details/dos32a-912-bin
+3. tok512.bin: https://huggingface.co/karpathy/tinyllamas/tree/main/stories260K
 
 ## llama2.c
 
@@ -231,7 +232,7 @@ For the sake of examples of smaller, from-scratch models, I trained a small mode
 
 | model | dim | n_layers | n_heads | n_kv_heads | max context length | parameters | val loss | download
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 260K | 64 | 5 | 8 | 4 | 512 | 260K | 1.297 | [stories260K](https://huggingface.co/karpathy/tinyllamas/tree/main/stories260K)
+| 260K | 64 | 5 | 8 | 4 | 512 | 260K | 1.297 | [stories260K](https://huggingface.co/karpathy/tinyllamas/tree/main/stories260K) |
 | OG | 288 | 6 | 6 | 6 | 256 | 15M | 1.072 | [stories15M.bin](https://huggingface.co/karpathy/tinyllamas/resolve/main/stories15M.bin) |
 | 42M| 512 | 8 | 8 | 8 | 1024 | 42M | 0.847 | [stories42M.bin](https://huggingface.co/karpathy/tinyllamas/resolve/main/stories42M.bin) |
 | 110M| 768 | 12 | 12 | 12 | 1024 | 110M | 0.760 | [stories110M.bin](https://huggingface.co/karpathy/tinyllamas/resolve/main/stories110M.bin) |
